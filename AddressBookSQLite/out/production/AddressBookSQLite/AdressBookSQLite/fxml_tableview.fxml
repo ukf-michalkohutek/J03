@@ -1,5 +1,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.*?>
+<?import AdressBookSQLite.*?>
 <?import javafx.scene.control.cell.*?>
 
 <?import javafx.scene.control.Button?>
@@ -45,7 +47,8 @@
         <TextField fx:id="firstNameField" promptText="First Name" prefWidth="150"/>
         <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
         <Button text="Add" onAction="#addPerson" />
-
+       <!-- <Button text="Populate" onAction="#populateTableView" />
+        <Button text="Connect" onAction="#connectDatabase" /> -->
 
     </HBox>
 </GridPane>
