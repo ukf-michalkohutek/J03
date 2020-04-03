@@ -39,9 +39,6 @@ public class SQLiteJDBC {
         return conn;
     }
 
-
-
-
     public void insertPerson(String lastName, String firstName, String email) {
         try {
             PreparedStatement preparedStatement;
@@ -53,7 +50,35 @@ public class SQLiteJDBC {
             preparedStatement.setString(2,firstName);
             preparedStatement.setString(3,email);
             preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
 
+    public void updatePerson(String lastName, String firstName, String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = "UPDATE person SET firstName = (?), email = (?) WHERE lastname like (?)";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(3,lastName);
+            preparedStatement.setString(1,firstName);
+            preparedStatement.setString(2,email);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
+
+    public void deletePerson(String student3) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = "DELETE FROM person WHERE lastname like (?)";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(1,student3);
+            preparedStatement.executeUpdate();
+            System.out.println(student3);
         } catch (SQLException e) {
             System.err.println( e.getMessage() );
         }

@@ -37,6 +37,22 @@ public class FXMLTableViewController  {
         emailField.setText("");
     }
 
+    @FXML protected void updatePerson(ActionEvent event) {
+        sqlConnector.updatePerson(lastNameField.getText(), firstNameField.getText(), emailField.getText());
+        for ( int i = 0; i<tableView.getItems().size(); i++) {
+            tableView.getItems().clear();
+        }
+        populateTableView();
+    }
+
+    @FXML protected void deletePerson(ActionEvent event) {
+        ObservableList<Person> data = tableView.getItems();
+        int student = tableView.getSelectionModel().getSelectedIndex();
+        Person student2 = tableView.getItems().get(tableView.getSelectionModel().getSelectedIndex());
+        String student3 = student2.getLastName();
+        data.remove(student);
+        sqlConnector.deletePerson(student3);
+    }
 
 
     @FXML protected void connectDatabase() {
@@ -53,7 +69,7 @@ public class FXMLTableViewController  {
             String lastName = resultSet.getString("lastname");
             String firstName = resultSet.getString("firstname");
             String email = resultSet.getString("email");
-            data.add(new Person(lastName,firstName,email));
+            data.add(new Person(firstName,lastName,email));
         }
         } catch (SQLException e) {
             e.printStackTrace();
