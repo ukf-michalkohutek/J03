@@ -49,9 +49,9 @@ public class FXMLTableViewController  {
         ObservableList<Person> data = tableView.getItems();
         int student = tableView.getSelectionModel().getSelectedIndex();
         Person student2 = tableView.getItems().get(tableView.getSelectionModel().getSelectedIndex());
-        String student3 = student2.getLastName();
+        String student3 = student2.getFirstName();
+        sqlConnector.selectPerson(student3);
         data.remove(student);
-        sqlConnector.deletePerson(student3);
     }
 
 
