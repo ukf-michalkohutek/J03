@@ -39,6 +39,37 @@ public class SQLiteJDBC {
         return conn;
     }
 
+    public void updatePerson(String firstName, String lastName, String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = " UPDATE person SET firstName = (?), lastName = (?) WHERE email like (?) ";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(1,firstName);
+            preparedStatement.setString(2,lastName);
+            preparedStatement.setString(3,email);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("DACO");
+            System.err.println( e.getMessage() );
+        }
+    }
+
+    public void removePerson(String firstName) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = " DELETE FROM person WHERE firstName = ? ";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(1,firstName);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
+
 
 
 

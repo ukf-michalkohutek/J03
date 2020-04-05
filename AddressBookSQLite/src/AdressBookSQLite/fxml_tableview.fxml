@@ -44,6 +44,8 @@
         <TextField fx:id="firstNameField" promptText="First Name" prefWidth="150"/>
         <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
         <Button text="Add" onAction="#addPerson" />
+        <Button text="Delete" onAction="#removePerson" />
+        <Button text="Update" onAction="#updatePerson" />
 
 
     </HBox>
