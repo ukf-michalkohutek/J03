@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class FXMLTableViewController  {
 
     @FXML private TableView<Person> tableView;
-    @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
+    @FXML private TextField firstNameField;
     @FXML private TextField emailField;
     @FXML SQLiteJDBC sqlConnector;
 
@@ -25,8 +25,12 @@ public class FXMLTableViewController  {
     //TODO: Add remove person functionality - https://www.sqlitetutorial.net/sqlite-delete/
     //TODO: Add update person functionality - https://www.sqlitetutorial.net/sqlite-update/
 
-
     @FXML protected void addPerson(ActionEvent event) {
+        if (lastNameField.getText().length() == 0 || firstNameField.getText().length() == 0 || emailField.getText().length() == 0)
+        {
+            return;
+        }
+
         ObservableList<Person> data = tableView.getItems();
 
         data.add(new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText()));
@@ -37,7 +41,34 @@ public class FXMLTableViewController  {
         emailField.setText("");
     }
 
+    @FXML protected void updatePerson(ActionEvent event) {
+        if (lastNameField.getText().length() == 0 || firstNameField.getText().length() == 0 || emailField.getText().length() == 0)
+        {
+            return;
+        }
 
+        ObservableList<Person> data = tableView.getItems();
+        TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
+        int index = selectionModel.getSelectedIndex();
+
+        Person person = data.get(index);
+        sqlConnector.updatePerson(lastNameField.getText(), firstNameField.getText(), emailField.getText(), person.getLastName(), person.getFirstName(), person.getEmail());
+        data.set(index, new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText()));
+
+        firstNameField.setText("");
+        lastNameField.setText("");
+        emailField.setText("");
+    }
+
+    @FXML protected void removePerson(ActionEvent event) {
+        ObservableList<Person> data = tableView.getItems();
+        TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
+        int index = selectionModel.getSelectedIndex();
+
+        Person person = data.get(index);
+        data.remove(index);
+        sqlConnector.removePerson(person.getLastName(), person.getFirstName(), person.getEmail());
+    }
 
     @FXML protected void connectDatabase() {
         sqlConnector = new SQLiteJDBC();
@@ -53,7 +84,7 @@ public class FXMLTableViewController  {
             String lastName = resultSet.getString("lastname");
             String firstName = resultSet.getString("firstname");
             String email = resultSet.getString("email");
-            data.add(new Person(lastName,firstName,email));
+            data.add(new Person(firstName, lastName,email));
         }
         } catch (SQLException e) {
             e.printStackTrace();
