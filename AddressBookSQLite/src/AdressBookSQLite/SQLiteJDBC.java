@@ -4,7 +4,6 @@ import java.sql.*;
 public class SQLiteJDBC {
 
 
-
     public SQLiteJDBC(){
         Connection c = null;
         Statement stmt = null;
@@ -16,8 +15,8 @@ public class SQLiteJDBC {
 
             stmt = c.createStatement();
             String sql = "CREATE TABLE IF NOT EXISTS person" +
-                           " (lastname  TEXT    NOT NULL, " +
-                           " firstname  TEXT    NOT NULL, " +
+                           " (lastName  TEXT    NOT NULL, " +
+                           " firstName  TEXT    NOT NULL, " +
                            " email  TEXT    NOT NULL)";
             stmt.executeUpdate(sql);
             stmt.close();
@@ -50,7 +49,44 @@ public class SQLiteJDBC {
                     "VALUES (?,?,?)";
             preparedStatement = connection.prepareStatement(sqlInsert);
             preparedStatement.setString(1,lastName);
-            preparedStatement.setString(2, firstName);
+            preparedStatement.setString(2,firstName);
+            preparedStatement.setString(3,email);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
+
+    public void updatePerson(String lastName, String firstName, String email,
+                             String newLastName, String newFirstName, String newEmail) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlUpdate = "UPDATE person SET lastName=?, firstName=?, email=? " +
+                               "WHERE lastName=? AND firstName=? AND email=?";
+            preparedStatement = connection.prepareStatement(sqlUpdate);
+            preparedStatement.setString(1,newLastName);
+            preparedStatement.setString(2,newFirstName);
+            preparedStatement.setString(3,newEmail);
+            preparedStatement.setString(4,lastName);
+            preparedStatement.setString(5,firstName);
+            preparedStatement.setString(6,email);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
+
+    public void deletePerson(String lastName, String firstName, String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlDelete = "DELETE FROM person WHERE lastName=? AND firstName=? AND email=?";
+            preparedStatement = connection.prepareStatement(sqlDelete);
+            preparedStatement.setString(1,lastName);
+            preparedStatement.setString(2,firstName);
             preparedStatement.setString(3,email);
             preparedStatement.executeUpdate();
 
@@ -63,7 +99,5 @@ public class SQLiteJDBC {
             String query = "SELECT * FROM person";
             ResultSet resultSet = this.getConnection().createStatement().executeQuery(query);
             return resultSet;
-
     }
-
 }

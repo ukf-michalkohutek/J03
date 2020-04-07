@@ -17,8 +17,8 @@ import java.util.ResourceBundle;
 public class FXMLTableViewController  {
 
     @FXML private TableView<Person> tableView;
-    @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
+    @FXML private TextField firstNameField;
     @FXML private TextField emailField;
     @FXML SQLiteJDBC sql;
 
@@ -39,6 +39,27 @@ public class FXMLTableViewController  {
     }
 
 
+    @FXML protected void updatePerson() {
+        ObservableList<Person> data = tableView.getItems();
+        Person p = tableView.getSelectionModel().getSelectedItem();
+        if (p==null) return;
+        String newLastName = (lastNameField.getText().isEmpty()) ? p.getLastName() : lastNameField.getText();
+        String newFirstName = (firstNameField.getText().isEmpty()) ? p.getFirstName() : firstNameField.getText();
+        String newEmail = (emailField.getText().isEmpty()) ? p.getEmail() : emailField.getText();
+        sql.updatePerson(p.getLastName(), p.getFirstName(), p.getEmail(), newLastName, newFirstName, newEmail);
+        data.clear(); firstNameField.clear();; lastNameField.clear(); emailField.clear();
+        populateTableView();
+    }
+
+
+    @FXML protected void deletePerson() {
+        ObservableList<Person> data = tableView.getItems();
+        Person p = tableView.getSelectionModel().getSelectedItem();
+        if (p==null) return;
+        sql.deletePerson(p.getLastName(), p.getFirstName(), p.getEmail());
+        data.remove(p);
+    }
+
 
     @FXML protected void connectDatabase() {
         sql = new SQLiteJDBC();
@@ -51,8 +72,8 @@ public class FXMLTableViewController  {
             resultSet = sql.getResultSet();
 
         while(resultSet.next()) {
-            String lastName = resultSet.getString("lastname");
-            String firstName = resultSet.getString("firstname");
+            String lastName = resultSet.getString("lastName");
+            String firstName = resultSet.getString("firstName");
             String email = resultSet.getString("email");
             data.add(new Person(lastName,firstName,email));
         }

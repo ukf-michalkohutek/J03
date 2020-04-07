@@ -12,7 +12,7 @@ public class Person {
         this("","","");
     }
 
-    public Person (String firstName, String lastName, String email) {
+    public Person (String lastName, String firstName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
