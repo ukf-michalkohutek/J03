@@ -1,5 +1,6 @@
 package AdressBookSQLite;
 
+import javafx.beans.Observable;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +26,29 @@ public class FXMLTableViewController  {
     //TODO: Add remove person functionality - https://www.sqlitetutorial.net/sqlite-delete/
     //TODO: Add update person functionality - https://www.sqlitetutorial.net/sqlite-update/
 
+    @FXML
+    protected void updatePerson(){
+        Person selected = tableView.getSelectionModel().getSelectedItem();
+        Person updated = new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText());
+        int index = tableView.getItems().indexOf(selected);
+
+        tableView.getItems().set(index,updated);
+        sqlConnector.updatePerson(selected.getLastName(),selected.getFirstName(),selected.getEmail(),updated.getLastName(),updated.getFirstName(),updated.getEmail());
+
+        firstNameField.setText("");
+        lastNameField.setText("");
+        emailField.setText("");
+    }
+
+    @FXML
+    protected void removePerson() {
+        Person selected = tableView.getSelectionModel().getSelectedItem();
+        tableView.getItems().remove(selected);
+
+        ObservableList<Person> data = tableView.getItems();
+        data.remove(selected);
+        sqlConnector.deletePerson(selected.getLastName(),selected.getFirstName(),selected.getEmail());
+    }
 
     @FXML protected void addPerson(ActionEvent event) {
         ObservableList<Person> data = tableView.getItems();
