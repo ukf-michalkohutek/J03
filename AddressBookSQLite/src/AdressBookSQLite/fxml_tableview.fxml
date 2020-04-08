@@ -46,7 +46,10 @@
         <TextField fx:id="lastNameField" promptText="Last Name" prefWidth="150"/>
         <TextField fx:id="firstNameField" promptText="First Name" prefWidth="150"/>
         <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
-        <Button text="Add" onAction="#addPerson" />
+        <Button text="Add" onAction="#addPerson"/>
+        <Button text="Remove" onAction="#removePerson"/>
+        <Button text="Update" onAction="#updatePerson"/>
+
        <!-- <Button text="Populate" onAction="#populateTableView" />
         <Button text="Connect" onAction="#connectDatabase" /> -->
 

@@ -38,6 +38,17 @@ public class FXMLTableViewController  {
         emailField.setText("");
     }
 
+    @FXML protected void removePerson(){
+        ObservableList<Person> data1 = tableView.getItems();
+        data1.remove(tableView.getSelectionModel().getSelectedItem());
+    }
+
+    @FXML protected void updatePerson(){
+        ObservableList<Person> data2 = tableView.getItems();
+        data2.remove(tableView.getSelectionModel().getSelectedItem());
+        data2.add(new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText()));
+    }
+
 
 
     @FXML protected void connectDatabase() {
