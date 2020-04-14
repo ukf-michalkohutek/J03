@@ -38,20 +38,21 @@ public class FXMLTableViewController  {
     }
 
     @FXML protected void updatePerson(ActionEvent event) {
-        sqlConnector.updatePerson(lastNameField.getText(), firstNameField.getText(), emailField.getText());
-        for ( int i = 0; i<tableView.getItems().size(); i++) {
-            tableView.getItems().clear();
-        }
+        ObservableList<Person> data = tableView.getItems();
+        Person student2 = tableView.getSelectionModel().getSelectedItem();
+        String student3 = student2.getEmail();
+        if (student3 == null) student3 = "";
+        sqlConnector.updatePerson(lastNameField.getText(), firstNameField.getText(), emailField.getText(), student3);
+        tableView.getItems().clear();
         populateTableView();
     }
 
     @FXML protected void deletePerson(ActionEvent event) {
         ObservableList<Person> data = tableView.getItems();
-        int student = tableView.getSelectionModel().getSelectedIndex();
-        Person student2 = tableView.getItems().get(tableView.getSelectionModel().getSelectedIndex());
-        String student3 = student2.getFirstName();
-        sqlConnector.selectPerson(student3);
-        data.remove(student);
+        Person student2 = tableView.getSelectionModel().getSelectedItem();
+        String student3 = student2.getEmail();
+        sqlConnector.deletePerson(student3);
+        data.remove(student2);
     }
 
 

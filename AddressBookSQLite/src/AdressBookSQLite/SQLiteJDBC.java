@@ -5,14 +5,13 @@ import java.util.ArrayList;
 public class SQLiteJDBC {
 
     public SQLiteJDBC(){
-        Connection c = null;
-        Statement stmt = null;
+        Connection c;
+        Statement stmt;
 
         try {
             Class.forName("org.sqlite.JDBC");
             c = getConnection();
             System.out.println("Opened database successfully");
-
             stmt = c.createStatement();
             String createTable = "CREATE TABLE IF NOT EXISTS person" +
                            " (lastname  TEXT    NOT NULL, " +
@@ -21,10 +20,8 @@ public class SQLiteJDBC {
             stmt.executeUpdate(createTable);
             stmt.close();
             c.close();
-
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-
         }
         System.out.println("Table created successfully");
     }
@@ -40,28 +37,11 @@ public class SQLiteJDBC {
         return conn;
     }
 
-    public void selectPerson(String student3) {
-        try {
-            ArrayList<String> firstnames = new ArrayList();
-            PreparedStatement preparedStatement;
-            Connection connection =  this.getConnection();
-            String sqlInsert = "SELECT * FROM person WHERE firstname = (?)";
-            preparedStatement = connection.prepareStatement(sqlInsert);
-            preparedStatement.setString(1,student3);
-            ResultSet rs = preparedStatement.executeQuery();
-            while(rs.next()) firstnames.add(rs.getString("firstname"));
-            for (int i = 0; i < firstnames.size(); i++) deletePerson(firstnames.get(i));
-        } catch (SQLException e) {
-            System.err.println( e.getMessage() );
-        }
-    }
-
     public void insertPerson(String lastName, String firstName, String email) {
         try {
             PreparedStatement preparedStatement;
             Connection connection =  this.getConnection();
-            String sqlInsert = "INSERT INTO person (lastName, firstName, email)" +
-                    "VALUES (?,?,?)";
+            String sqlInsert = "INSERT INTO person (lastName, firstName, email)" + "VALUES (?,?,?)";
             preparedStatement = connection.prepareStatement(sqlInsert);
             preparedStatement.setString(1,lastName);
             preparedStatement.setString(2,firstName);
@@ -72,15 +52,19 @@ public class SQLiteJDBC {
         }
     }
 
-    public void updatePerson(String lastName, String firstName, String email) {
+    public void updatePerson(String lastName, String firstName, String email, String student3) {
         try {
+            if (lastName == null) lastName = "";
+            if (firstName == null) firstName = "";
+            if (email == null) email = "";
             PreparedStatement preparedStatement;
             Connection connection =  this.getConnection();
-            String sqlInsert = "UPDATE person SET firstName = (?), email = (?) WHERE lastName like (?)";
+            String sqlInsert = "UPDATE person SET lastName = (?), firstName = (?), email = (?) WHERE email = (?)";
             preparedStatement = connection.prepareStatement(sqlInsert);
-            preparedStatement.setString(3,lastName);
-            preparedStatement.setString(1,firstName);
-            preparedStatement.setString(2,email);
+            preparedStatement.setString(1,lastName);
+            preparedStatement.setString(2,firstName);
+            preparedStatement.setString(3,email);
+            preparedStatement.setString(4,student3);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.err.println( e.getMessage() );
@@ -91,7 +75,7 @@ public class SQLiteJDBC {
         try {
             PreparedStatement preparedStatement;
             Connection connection =  this.getConnection();
-            String sqlInsert = "DELETE FROM person WHERE firstname = (?) ";
+            String sqlInsert = "DELETE FROM person WHERE email = (?) ";
             preparedStatement = connection.prepareStatement(sqlInsert);
             preparedStatement.setString(1, firstname);
             preparedStatement.executeUpdate();
