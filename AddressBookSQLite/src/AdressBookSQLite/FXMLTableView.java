@@ -13,7 +13,7 @@ public class FXMLTableView extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("fxml_tableview.fxml"));
         primaryStage.setTitle("Hello World");
         System.out.println(primaryStage.getStyle());
-        primaryStage.setScene(new Scene(root, 800, 275));
+        primaryStage.setScene(new Scene(root, 900, 350));
         primaryStage.show();
     }
 

@@ -3,6 +3,8 @@ import java.sql.*;
 
 public class SQLiteJDBC {
 
+
+
     public SQLiteJDBC(){
         Connection c = null;
         Statement stmt = null;
@@ -13,11 +15,11 @@ public class SQLiteJDBC {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            String createTable = "CREATE TABLE IF NOT EXISTS person" +
+            String sql = "CREATE TABLE IF NOT EXISTS person" +
                            " (lastname  TEXT    NOT NULL, " +
                            " firstname  TEXT    NOT NULL, " +
                            " email  TEXT    NOT NULL)";
-            stmt.executeUpdate(createTable);
+            stmt.executeUpdate(sql);
             stmt.close();
             c.close();
 
@@ -40,8 +42,6 @@ public class SQLiteJDBC {
     }
 
 
-
-
     public void insertPerson(String lastName, String firstName, String email) {
         try {
             PreparedStatement preparedStatement;
@@ -50,7 +50,7 @@ public class SQLiteJDBC {
                     "VALUES (?,?,?)";
             preparedStatement = connection.prepareStatement(sqlInsert);
             preparedStatement.setString(1,lastName);
-            preparedStatement.setString(2,firstName);
+            preparedStatement.setString(2, firstName);
             preparedStatement.setString(3,email);
             preparedStatement.executeUpdate();
 
@@ -64,6 +64,29 @@ public class SQLiteJDBC {
             ResultSet resultSet = this.getConnection().createStatement().executeQuery(query);
             return resultSet;
 
+    }
+    public void deletePerson(String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlDelete = "DELETE FROM person WHERE email='" + email + "'";
+            preparedStatement = connection.prepareStatement(sqlDelete);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
+
+    public void Update(String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlUpdate = "SELECT * FROM person WHERE email='" + email + "'";
+            preparedStatement = connection.prepareStatement(sqlUpdate);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
     }
 
 }
