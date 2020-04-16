@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AddressBookSQLite.iml" filepath="$PROJECT_DIR$/AddressBookSQLite.iml" />
-      <module fileurl="file://$PATH_TO_FX$/lib/lib.iml" filepath="$PATH_TO_FX$/lib/lib.iml" />
     </modules>
   </component>
 </project>
