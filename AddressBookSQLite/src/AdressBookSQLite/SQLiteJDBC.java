@@ -3,8 +3,6 @@ import java.sql.*;
 
 public class SQLiteJDBC {
 
-
-
     public SQLiteJDBC(){
         Connection c = null;
         Statement stmt = null;
@@ -15,11 +13,11 @@ public class SQLiteJDBC {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            String sql = "CREATE TABLE IF NOT EXISTS person" +
+            String createTable = "CREATE TABLE IF NOT EXISTS person" +
                            " (lastname  TEXT    NOT NULL, " +
                            " firstname  TEXT    NOT NULL, " +
                            " email  TEXT    NOT NULL)";
-            stmt.executeUpdate(sql);
+            stmt.executeUpdate(createTable);
             stmt.close();
             c.close();
 
@@ -42,6 +40,8 @@ public class SQLiteJDBC {
     }
 
 
+
+
     public void insertPerson(String lastName, String firstName, String email) {
         try {
             PreparedStatement preparedStatement;
@@ -50,7 +50,7 @@ public class SQLiteJDBC {
                     "VALUES (?,?,?)";
             preparedStatement = connection.prepareStatement(sqlInsert);
             preparedStatement.setString(1,lastName);
-            preparedStatement.setString(2, firstName);
+            preparedStatement.setString(2,firstName);
             preparedStatement.setString(3,email);
             preparedStatement.executeUpdate();
 
@@ -66,4 +66,25 @@ public class SQLiteJDBC {
 
     }
 
+    public void updatePerson(String lastName, String firstName, String email) {
+    }
+
+    public void removePerson(String lastName, String firstName, String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlRemove = "DELETE FROM person" +
+                    "WHERE lastName = ?" +
+                    "AND firstName = ?" +
+                    "AND email = ?";
+            preparedStatement = connection.prepareStatement(sqlRemove);
+            preparedStatement.setString(1,lastName);
+            preparedStatement.setString(2, firstName);
+            preparedStatement.setString(3,email);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
 }

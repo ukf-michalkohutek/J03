@@ -89,8 +89,8 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fxmltableview/sqlite-jdbc-3.30.1.jar!/" />
+    <property name="jdk.selected.JAVA_MODULE" value="13 (2)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -124,11 +124,11 @@
       <Port>5050</Port>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="ALTERNATIVE_JRE_PATH" value="13 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="AdressBookSQLite.FXMLTableView" />
       <module name="AddressBookSQLite" />
-      <option name="VM_PARAMETERS" value="--module-path /opt/javafx-sdk-14/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="AdressBookSQLite.*" />
@@ -153,53 +153,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="AddressBookSQLite" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="AddressBookSQLite" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -252,60 +205,81 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="2441" y="1148" width="848" height="684" key="#Project_Structure/72.27.3768.2133@72.27.3768.2133" timestamp="1584906748950" />
-    <state x="1407" y="551" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585152678932">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="716" y="489" width="869" height="543" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587073428857">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="716" y="489" width="869" height="543" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587073428857" />
     <state x="2297" y="994" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.3840.2130@0.30.3840.2130" timestamp="1584708521856" />
-    <state x="1407" y="551" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1585152678932" />
-    <state x="2333" y="1252" width="644" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585502779489">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="1478" y="1029" width="1704" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1585908869286" />
+    <state x="1152" y="597" width="516" height="198" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587074138061">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1152" y="597" width="516" height="198" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587074138061" />
     <state x="2333" y="1252" width="644" height="397" key="#com.intellij.fileTypes.FileTypeChooser/72.27.3768.2133@72.27.3768.2133" timestamp="1585502779489" />
     <state x="1245" y="1391" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1585068807564">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="1245" y="1391" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/72.27.3768.2133@72.27.3768.2133" timestamp="1585068807564" />
+    <state x="1291" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587066576177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1291" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587066576177" />
+    <state x="1085" y="1250" width="324" height="681" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585907313513">
+      <screen x="72" y="27" width="3768" height="2133" />
+    </state>
+    <state x="1085" y="1250" width="324" height="681" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1585907313513" />
     <state x="1686" y="622" width="515" height="549" key="EnvironmentVariablesDialog" timestamp="1584913982426">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="1686" y="622" width="515" height="549" key="EnvironmentVariablesDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1584913982426" />
-    <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl" timestamp="1584914118124">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="1290" y="563" width="588" height="358" key="FileChooserDialogImpl" timestamp="1587073584817">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1290" y="563" width="588" height="358" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587073584817" />
     <state x="2531" y="1232" width="610" height="515" key="FileChooserDialogImpl/0.30.3840.2130@0.30.3840.2130" timestamp="1584707549378" />
-    <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl/72.27.3768.2133@72.27.3768.2133" timestamp="1584914118124" />
-    <state width="1955" height="348" key="GridCell.Tab.0.bottom" timestamp="1585902888125">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl/72.27.3768.2133@72.27.3768.2133" timestamp="1585908104726" />
+    <state width="914" height="278" key="GridCell.Tab.0.bottom" timestamp="1587077952781">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="914" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587077952781" />
     <state width="1942" height="357" key="GridCell.Tab.0.bottom/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183055" />
     <state width="2252" height="241" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241929" />
-    <state width="1955" height="348" key="GridCell.Tab.0.bottom/72.27.3768.2133@72.27.3768.2133" timestamp="1585902888125" />
-    <state width="1955" height="348" key="GridCell.Tab.0.center" timestamp="1585902888125">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1941" height="90" key="GridCell.Tab.0.bottom/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923388" />
+    <state width="914" height="278" key="GridCell.Tab.0.center" timestamp="1587077952781">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="914" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587077952781" />
     <state width="1942" height="357" key="GridCell.Tab.0.center/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183054" />
     <state width="2252" height="241" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
-    <state width="1955" height="348" key="GridCell.Tab.0.center/72.27.3768.2133@72.27.3768.2133" timestamp="1585902888125" />
-    <state width="1955" height="348" key="GridCell.Tab.0.left" timestamp="1585902888124">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1941" height="90" key="GridCell.Tab.0.center/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
+    <state width="914" height="278" key="GridCell.Tab.0.left" timestamp="1587077952781">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="914" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587077952781" />
     <state width="1942" height="357" key="GridCell.Tab.0.left/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183054" />
     <state width="2252" height="241" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
-    <state width="1955" height="348" key="GridCell.Tab.0.left/72.27.3768.2133@72.27.3768.2133" timestamp="1585902888124" />
-    <state width="1955" height="348" key="GridCell.Tab.0.right" timestamp="1585902888125">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1941" height="90" key="GridCell.Tab.0.left/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
+    <state width="914" height="278" key="GridCell.Tab.0.right" timestamp="1587077952781">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="914" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587077952781" />
     <state width="1942" height="357" key="GridCell.Tab.0.right/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183055" />
     <state width="2252" height="241" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
-    <state width="1955" height="348" key="GridCell.Tab.0.right/72.27.3768.2133@72.27.3768.2133" timestamp="1585902888125" />
-    <state x="2490" y="1073" width="1350" height="1087" key="SettingsEditor" timestamp="1585152430618">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1941" height="90" key="GridCell.Tab.0.right/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
+    <state x="1067" y="324" key="NewModule_or_Project.wizard" timestamp="1587070751232">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1067" y="324" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587070751232" />
+    <state x="880" y="197" width="1350" height="1087" key="SettingsEditor" timestamp="1587070754727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="880" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587070754727" />
     <state x="2329" y="1064" width="1024" height="848" key="SettingsEditor/0.30.3840.2130@0.30.3840.2130" timestamp="1584708302466" />
-    <state x="2490" y="1073" width="1350" height="1087" key="SettingsEditor/72.27.3768.2133@72.27.3768.2133" timestamp="1585152430618" />
-    <state x="1991" y="1189" width="1372" height="806" key="new project wizard" timestamp="1585152478679">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="2091" y="1073" width="1350" height="1087" key="SettingsEditor/72.27.3768.2133@72.27.3768.2133" timestamp="1585908833945" />
+    <state x="978" y="567" width="700" height="460" key="new project wizard" timestamp="1587070732328">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="978" y="567" width="700" height="460" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587070732328" />
     <state x="1991" y="1189" width="1372" height="806" key="new project wizard/72.27.3768.2133@72.27.3768.2133" timestamp="1585152478679" />
     <state x="2509" y="1132" width="672" height="678" key="search.everywhere.popup" timestamp="1584703259688">
       <screen x="0" y="30" width="3840" height="2130" />
