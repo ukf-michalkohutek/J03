@@ -87,11 +87,13 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fxmltableview/sqlite-jdbc-3.30.1.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../J03-master123/AddressBookSQLite" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -124,11 +126,11 @@
       <Port>5050</Port>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-13.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="AdressBookSQLite.FXMLTableView" />
       <module name="AddressBookSQLite" />
-      <option name="VM_PARAMETERS" value="--module-path /opt/javafx-sdk-14/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;D:\Programko\javafx-sdk-13.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="AdressBookSQLite.*" />
@@ -153,53 +155,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="AddressBookSQLite" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="AddressBookSQLite" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,11 +192,17 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1585907808487" duration="126000" />
+      <workItem from="1585907961980" duration="40000" />
+      <workItem from="1585908221265" duration="53000" />
+      <workItem from="1585908295954" duration="162000" />
+      <workItem from="1586278642396" duration="599000" />
+      <workItem from="1587105418031" duration="3014000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -252,9 +213,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="2441" y="1148" width="848" height="684" key="#Project_Structure/72.27.3768.2133@72.27.3768.2133" timestamp="1584906748950" />
-    <state x="1407" y="551" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585152678932">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="727" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587106717005">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="727" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587106717005" />
     <state x="2297" y="994" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.3840.2130@0.30.3840.2130" timestamp="1584708521856" />
     <state x="1407" y="551" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1585152678932" />
     <state x="2333" y="1252" width="644" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585502779489">
@@ -269,9 +231,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="1686" y="622" width="515" height="549" key="EnvironmentVariablesDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1584913982426" />
-    <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl" timestamp="1584914118124">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="1290" y="520" width="735" height="520" key="FileChooserDialogImpl" timestamp="1587106143869">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="1290" y="520" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587106143869" />
     <state x="2531" y="1232" width="610" height="515" key="FileChooserDialogImpl/0.30.3840.2130@0.30.3840.2130" timestamp="1584707549378" />
     <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl/72.27.3768.2133@72.27.3768.2133" timestamp="1584914118124" />
     <state width="1955" height="348" key="GridCell.Tab.0.bottom" timestamp="1585902888125">
@@ -298,11 +261,16 @@
     <state width="1942" height="357" key="GridCell.Tab.0.right/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183055" />
     <state width="2252" height="241" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
     <state width="1955" height="348" key="GridCell.Tab.0.right/72.27.3768.2133@72.27.3768.2133" timestamp="1585902888125" />
-    <state x="2490" y="1073" width="1350" height="1087" key="SettingsEditor" timestamp="1585152430618">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="880" y="186" width="1350" height="1087" key="SettingsEditor" timestamp="1587106235966">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="880" y="186" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587106235966" />
     <state x="2329" y="1064" width="1024" height="848" key="SettingsEditor/0.30.3840.2130@0.30.3840.2130" timestamp="1584708302466" />
     <state x="2490" y="1073" width="1350" height="1087" key="SettingsEditor/72.27.3768.2133@72.27.3768.2133" timestamp="1585152430618" />
+    <state x="1083" y="453" key="com.intellij.ide.util.TipDialog" timestamp="1587105420231">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1083" y="453" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587105420231" />
     <state x="1991" y="1189" width="1372" height="806" key="new project wizard" timestamp="1585152478679">
       <screen x="72" y="27" width="3768" height="2133" />
     </state>

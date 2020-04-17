@@ -50,5 +50,11 @@
        <!-- <Button text="Populate" onAction="#populateTableView" />
         <Button text="Connect" onAction="#connectDatabase" /> -->
 
+
+        <Button text="Populate" onAction="#populateTableView" />
+        <Button text="Connect" onAction="#connectDatabase" />
+
+
+
     </HBox>
 </GridPane>
