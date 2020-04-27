@@ -37,6 +37,31 @@ public class FXMLTableViewController  {
         emailField.setText("");
     }
 
+    @FXML protected void removePerson(ActionEvent event){
+        ObservableList<Person> data = tableView.getItems();
+        Person person = this.tableView.getSelectionModel().getSelectedItem();
+        if (person == null) return;
+        data.remove(person);
+        this.sqlConnector.removePerson(person.getLastName(),person.getFirstName(),person.getEmail());
+    }
+
+    @FXML protected void updatePerson(ActionEvent event) {
+        if (lastNameField.getText().length() == 0 || firstNameField.getText().length() == 0 || emailField.getText().length() == 0)
+        {
+            return;
+        }
+
+        ObservableList<Person> data = tableView.getItems();
+        TableView.TableViewSelectionModel<Person> selectionModel = tableView.getSelectionModel();
+
+        Person person = data.get(selectionModel.getSelectedIndex());
+        this.sqlConnector.updatePerson(lastNameField.getText(), firstNameField.getText(), emailField.getText(), person.getLastName(), person.getFirstName(), person.getEmail());
+        data.set(selectionModel.getSelectedIndex(), new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText()));
+
+        firstNameField.setText("");
+        lastNameField.setText("");
+        emailField.setText("");
+    }
 
 
     @FXML protected void connectDatabase() {
