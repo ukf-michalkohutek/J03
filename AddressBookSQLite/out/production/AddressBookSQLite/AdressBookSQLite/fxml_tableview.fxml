@@ -43,7 +43,6 @@
         <TextField fx:id="lastNameField" promptText="Last Name" prefWidth="150"/>
         <TextField fx:id="firstNameField" promptText="First Name" prefWidth="150"/>
         <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
-        <TextField fx:id="indexField" promptText="index" prefWidth="50"/>
         <Button text="Add" onAction="#addPerson" />
         <Button text="Update" onAction="#updatePerson" />
         <Button text="Delete" onAction="#deletePerson" />

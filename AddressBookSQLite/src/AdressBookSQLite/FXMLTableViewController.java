@@ -14,7 +14,6 @@ public class FXMLTableViewController  {
     @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
     @FXML private TextField emailField;
-    @FXML private TextField indexField;
     @FXML SQLiteJDBC sqlConnector;
 
 
@@ -41,29 +40,23 @@ public class FXMLTableViewController  {
     @FXML protected void updatePerson(){
         ObservableList<Person> data = tableView.getItems();
 
-        int index = Math.abs(Integer.parseInt(indexField.getText())) % data.size();
-        data.remove(index);
+        Person person = this.tableView.getSelectionModel().getSelectedItem();
+        data.remove(person);
         
         data.add(new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText()));
         sqlConnector.insertPerson(lastNameField.getText(), firstNameField.getText(), emailField.getText());
 
-        indexField.setText("");
         firstNameField.setText("");
         lastNameField.setText("");
         emailField.setText("");
     }
 
-    @FXML protected void deletePerson(){
+    @FXML protected void deletePerson(ActionEvent event){
         ObservableList<Person> data = tableView.getItems();
-
-        int index = Math.abs(Integer.parseInt(indexField.getText())) % data.size();
-
-        data.remove(index);
-
-        indexField.setText("");
-        firstNameField.setText("");
-        lastNameField.setText("");
-        emailField.setText("");
+        Person person = this.tableView.getSelectionModel().getSelectedItem();
+        if (person == null) return;
+        this.sqlConnector.removePerson(person.getFirstName(),person.getLastName(),person.getEmail());
+        data.remove(person);
     }
 
     @FXML protected void connectDatabase() {
@@ -86,5 +79,4 @@ public class FXMLTableViewController  {
             e.printStackTrace();
         }
     }
-
 }
