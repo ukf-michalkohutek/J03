@@ -39,8 +39,36 @@ public class SQLiteJDBC {
         return conn;
     }
 
+    public void deletePerson(String email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = "DELETE FROM person WHERE email = ?";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(1,email);
+            preparedStatement.executeUpdate();
 
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
 
+    public void updatePerson(String lastName, String firstName, String email, String old_email) {
+        try {
+            PreparedStatement preparedStatement;
+            Connection connection =  this.getConnection();
+            String sqlInsert = "UPDATE person SET lastname = ?, firstName = ?, email = ? WHERE email = ?";
+            preparedStatement = connection.prepareStatement(sqlInsert);
+            preparedStatement.setString(1,lastName);
+            preparedStatement.setString(2,firstName);
+            preparedStatement.setString(3,email);
+            preparedStatement.setString(4,old_email);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println( e.getMessage() );
+        }
+    }
 
     public void insertPerson(String lastName, String firstName, String email) {
         try {
