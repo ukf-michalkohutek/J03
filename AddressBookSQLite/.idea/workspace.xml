@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddressBook.db" beforeDir="false" afterPath="$PROJECT_DIR$/AddressBook.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddressBookSQLite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AddressBookSQLite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/FXMLTableView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/FXMLTableView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/FXMLTableViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/FXMLTableViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/SQLiteJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/SQLiteJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/fxml_tableview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBookSQLite/AdressBookSQLite/fxml_tableview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBookSQLite/META-INF/AddressBookSQLite.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdressBookSQLite/FXMLTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdressBookSQLite/FXMLTableView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdressBookSQLite/FXMLTableViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdressBookSQLite/FXMLTableViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdressBookSQLite/fxml_tableview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdressBookSQLite/fxml_tableview.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,9 +66,6 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -66,17 +78,20 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ZOGoi0VrUmqQllB9ZO6lnziNha" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -87,11 +102,15 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AdressBookSQLite/sqlite-jdbc-3.30.1.jar!/" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GGG help/J03-master/J03-master/AddressBookSQLite" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -128,7 +147,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="AdressBookSQLite.FXMLTableView" />
       <module name="AddressBookSQLite" />
-      <option name="VM_PARAMETERS" value="--module-path /opt/javafx-sdk-14/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="AdressBookSQLite.*" />
@@ -190,11 +209,13 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1589118306800" duration="1301000" />
+      <workItem from="1589119692865" duration="2403000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -205,9 +226,10 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="2441" y="1148" width="848" height="684" key="#Project_Structure/72.27.3768.2133@72.27.3768.2133" timestamp="1584906748950" />
-    <state x="1478" y="1029" width="1704" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585908869286">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="955" y="658" width="1158" height="527" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589119798952">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="955" y="658" width="1158" height="527" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589119798952" />
     <state x="2297" y="994" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.3840.2130@0.30.3840.2130" timestamp="1584708521856" />
     <state x="1478" y="1029" width="1704" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1585908869286" />
     <state x="2333" y="1252" width="644" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585502779489">
@@ -226,38 +248,44 @@
       <screen x="72" y="27" width="3768" height="2133" />
     </state>
     <state x="1686" y="622" width="515" height="549" key="EnvironmentVariablesDialog/72.27.3768.2133@72.27.3768.2133" timestamp="1584913982426" />
-    <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl" timestamp="1585908104726">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="1720" y="899" width="588" height="342" key="FileChooserDialogImpl" timestamp="1589123112045">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="1720" y="899" width="588" height="342" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1589123112045" />
     <state x="2531" y="1232" width="610" height="515" key="FileChooserDialogImpl/0.30.3840.2130@0.30.3840.2130" timestamp="1584707549378" />
     <state x="2603" y="1396" width="735" height="520" key="FileChooserDialogImpl/72.27.3768.2133@72.27.3768.2133" timestamp="1585908104726" />
-    <state width="1941" height="90" key="GridCell.Tab.0.bottom" timestamp="1585909923388">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1234" height="88" key="GridCell.Tab.0.bottom" timestamp="1589123773341">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state width="1234" height="88" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1589123773341" />
     <state width="1942" height="357" key="GridCell.Tab.0.bottom/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183055" />
     <state width="2252" height="241" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241929" />
     <state width="1941" height="90" key="GridCell.Tab.0.bottom/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923388" />
-    <state width="1941" height="90" key="GridCell.Tab.0.center" timestamp="1585909923387">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1234" height="88" key="GridCell.Tab.0.center" timestamp="1589123773340">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state width="1234" height="88" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1589123773340" />
     <state width="1942" height="357" key="GridCell.Tab.0.center/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183054" />
     <state width="2252" height="241" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
     <state width="1941" height="90" key="GridCell.Tab.0.center/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
-    <state width="1941" height="90" key="GridCell.Tab.0.left" timestamp="1585909923387">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1234" height="88" key="GridCell.Tab.0.left" timestamp="1589123773340">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state width="1234" height="88" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1589123773340" />
     <state width="1942" height="357" key="GridCell.Tab.0.left/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183054" />
     <state width="2252" height="241" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
     <state width="1941" height="90" key="GridCell.Tab.0.left/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
-    <state width="1941" height="90" key="GridCell.Tab.0.right" timestamp="1585909923387">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state width="1234" height="88" key="GridCell.Tab.0.right" timestamp="1589123773340">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state width="1234" height="88" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1589123773340" />
     <state width="1942" height="357" key="GridCell.Tab.0.right/0.30.3840.2130@0.30.3840.2130" timestamp="1584713183055" />
     <state width="2252" height="241" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1585155241928" />
     <state width="1941" height="90" key="GridCell.Tab.0.right/72.27.3768.2133@72.27.3768.2133" timestamp="1585909923387" />
-    <state x="2091" y="1073" width="1350" height="1087" key="SettingsEditor" timestamp="1585908833945">
-      <screen x="72" y="27" width="3768" height="2133" />
+    <state x="1372" y="548" width="1350" height="1087" key="SettingsEditor" timestamp="1589119700820">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="1372" y="548" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1589119700820" />
     <state x="2329" y="1064" width="1024" height="848" key="SettingsEditor/0.30.3840.2130@0.30.3840.2130" timestamp="1584708302466" />
     <state x="2091" y="1073" width="1350" height="1087" key="SettingsEditor/72.27.3768.2133@72.27.3768.2133" timestamp="1585908833945" />
     <state x="1991" y="1189" width="1372" height="806" key="new project wizard" timestamp="1585152478679">

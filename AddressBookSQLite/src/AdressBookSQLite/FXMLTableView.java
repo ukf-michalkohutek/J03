@@ -11,9 +11,9 @@ public class FXMLTableView extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("fxml_tableview.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Adress book v2");
         System.out.println(primaryStage.getStyle());
-        primaryStage.setScene(new Scene(root, 800, 275));
+        primaryStage.setScene(new Scene(root, 750, 500));
         primaryStage.show();
     }
 

@@ -20,13 +20,13 @@
     <TableView fx:id="tableView" GridPane.columnIndex="0"
                GridPane.rowIndex="1">
         <columns>
-            <TableColumn fx:id="lastNameColumn" prefWidth="200" text="Last Name">
+            <TableColumn fx:id="lastNameColumn" prefWidth="100" text="Priezvisko">
                 <cellValueFactory> <PropertyValueFactory property="lastName"/> </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="firstNameColumn" prefWidth="200" text="First Name">
+            <TableColumn fx:id="firstNameColumn" prefWidth="100" text="Meno">
                 <cellValueFactory> <PropertyValueFactory property="firstName"/> </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="emailColumn"  prefWidth="300" text="Email Address">
+            <TableColumn fx:id="emailColumn" prefWidth="500" text="Email Address">
                 <cellValueFactory> <PropertyValueFactory property="email"/> </cellValueFactory>
             </TableColumn>
         </columns>
@@ -44,6 +44,8 @@
         <TextField fx:id="firstNameField" promptText="First Name" prefWidth="150"/>
         <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
         <Button text="Add" onAction="#addPerson" />
+        <Button text="Remove" onAction="#removePerson"/>
+        <Button text="Update" onAction="#updatePerson"/>
 
 
     </HBox>
