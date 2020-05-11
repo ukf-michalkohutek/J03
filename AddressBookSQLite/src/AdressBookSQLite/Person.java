@@ -16,7 +16,6 @@ public class Person {
         setEmail(email);
     }
 
-    //setters
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);
     }
@@ -28,8 +27,6 @@ public class Person {
     public void setEmail(String email){
         this.email.set(email);
     }
-
-    //getters
 
     public String getFirstName(){
         return this.firstName.get();
