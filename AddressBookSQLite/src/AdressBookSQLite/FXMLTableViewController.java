@@ -37,8 +37,6 @@ public class FXMLTableViewController  {
         emailField.setText("");
     }
 
-
-
     @FXML protected void connectDatabase() {
         sqlConnector = new SQLiteJDBC();
     }
@@ -60,4 +58,26 @@ public class FXMLTableViewController  {
         }
     }
 
+    @FXML public void removePerson(ActionEvent actionEvent) {
+        ObservableList<Person> data = tableView.getItems();
+        int index = tableView.getSelectionModel().getSelectedIndex();
+        Person person = data.get(index);
+
+        data.remove(index);
+        sqlConnector.removePerson(person);
+    }
+
+    public void updatePerson(ActionEvent actionEvent) {
+        ObservableList<Person> data = tableView.getItems();
+        int index = tableView.getSelectionModel().getSelectedIndex();
+        Person personOld = data.get(index);
+        Person personNew = new Person(firstNameField.getText(), lastNameField.getText(), emailField.getText());
+
+        data.set(index, personNew);
+        sqlConnector.updatePerson(personOld, personNew);
+
+        firstNameField.setText("");
+        lastNameField.setText("");
+        emailField.setText("");
+    }
 }
