@@ -9,10 +9,10 @@ public class Person {
     private final SimpleStringProperty email = new SimpleStringProperty("");
 
     public Person() {
-        this("","","");
+        this("", "", "");
     }
 
-    public Person (String firstName, String lastName, String email) {
+    public Person(String lastName, String firstName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
@@ -27,21 +27,21 @@ public class Person {
         this.lastName.set(lastName);
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email.set(email);
     }
 
     //getters
 
-    public String getFirstName(){
+    public String getFirstName() {
         return this.firstName.get();
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return this.lastName.get();
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return this.email.get();
     }
 
