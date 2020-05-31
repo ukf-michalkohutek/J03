@@ -1,4 +1,6 @@
 package AdressBookSQLite;
+
+
 import javafx.beans.property.SimpleStringProperty;
 
 public class Person {
@@ -10,7 +12,7 @@ public class Person {
         this("","","");
     }
 
-    public Person (String firstName, String lastName, String email) {
+    public Person (String lastName, String firstName, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
@@ -42,4 +44,6 @@ public class Person {
     public String getEmail(){
         return this.email.get();
     }
+
+
 }
